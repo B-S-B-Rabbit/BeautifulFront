@@ -1,22 +1,13 @@
 html,
 body {
-  height: 100%;
-}
+  height: 100%; }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#D0B0F4), color-stop(#8458B3), to(#494D5F));
-  background: linear-gradient(#D0B0F4, #8458B3, #494D5F);
-}
+  background: linear-gradient(#D0B0F4, #8458B3, #494D5F); }
 
 .table {
   font-size: calc(14px + 8 * (100vw - 320px) / 880);
@@ -25,40 +16,33 @@ body {
   border-collapse: collapse;
   border-spacing: 0;
   z-index: 1;
-  overflow: hidden;
-}
-.table__head, .table__item {
-  padding: 1vw;
-  text-align: center;
-}
-.table__head {
-  background-color: #494D5F;
-}
-.table__row:nth-child(odd) {
-  background-color: #8458b3d0;
-  position: relative;
-}
-.table__row:nth-child(odd):hover {
-  background-color: #a0d2eb70;
-}
-.table__row:nth-child(even) {
-  background-color: #d0b0f4c2;
-  color: #494545;
-  position: relative;
-}
-.table__row:nth-child(even):hover {
-  background-color: #a0d2eb6e;
-}
-.table__item {
-  position: relative;
-}
-.table__item:hover:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -9999px;
-  bottom: -9999px;
-  background-color: #a0d2eba8;
-  z-index: -1;
-}
+  overflow: hidden; }
+  .table__head, .table__item {
+    padding: 1vw;
+    text-align: center; }
+  .table__head {
+    background-color: #494D5F; }
+  .table__row:nth-child(odd) {
+    background-color: #8458b3d0;
+    position: relative; }
+    .table__row:nth-child(odd):hover {
+      background-color: #a0d2eb70; }
+  .table__row:nth-child(even) {
+    background-color: #d0b0f4c2;
+    color: #494545;
+    position: relative; }
+    .table__row:nth-child(even):hover {
+      background-color: #a0d2eb6e; }
+  .table__item {
+    position: relative; }
+    .table__item:hover:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -9999px;
+      bottom: -9999px;
+      background-color: #a0d2eba8;
+      z-index: -1; }
+
+/*# sourceMappingURL=table-style.css.map */
