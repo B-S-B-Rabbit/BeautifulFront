@@ -1,0 +1,80 @@
+@font-face {
+  font-display: swap;
+  font-family: normal;
+  src: url("normal.ttf");
+}
+@font-face {
+  font-display: swap;
+  font-family: glitch;
+  src: url("glitch.ttf");
+}
+body {
+  background: #2b2a2a;
+}
+
+.button-wrapper {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.glitch-button {
+  font-family: normal;
+  font-size: 4vw;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.glitch-button:hover {
+  -webkit-animation: glitch .3s ease infinite;
+          animation: glitch .3s ease infinite;
+}
+
+@-webkit-keyframes glitch {
+  0% {
+    text-shadow: -5px 5px #00ffc8, -5px 5px #db1212;
+  }
+  20% {
+    text-shadow: -5px 5px #00ffc8, 5px -5px #db1212;
+  }
+  40% {
+    text-shadow: -5px -5px #00ffc8, 5px 5px #db1212;
+  }
+  60% {
+    text-shadow: 5px 5px #00ffc8, -5px -5px #db1212;
+  }
+  80% {
+    text-shadow: 5px -5px #00ffc8, -5px 5px #db1212;
+  }
+  to {
+    text-shadow: -5px 5px #00ffc8, -5px 5px #db1212;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -5px 5px #00ffc8, -5px 5px #db1212;
+  }
+  20% {
+    text-shadow: -5px 5px #00ffc8, 5px -5px #db1212;
+  }
+  40% {
+    text-shadow: -5px -5px #00ffc8, 5px 5px #db1212;
+  }
+  60% {
+    text-shadow: 5px 5px #00ffc8, -5px -5px #db1212;
+  }
+  80% {
+    text-shadow: 5px -5px #00ffc8, -5px 5px #db1212;
+  }
+  to {
+    text-shadow: -5px 5px #00ffc8, -5px 5px #db1212;
+  }
+}

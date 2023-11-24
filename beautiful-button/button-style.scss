@@ -1,0 +1,54 @@
+@font-face {
+    font-display: swap;
+    font-family: normal;
+    src: url("normal.ttf");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: glitch;
+    src: url("glitch.ttf");
+  }
+$glitch-color1: rgb(0, 255, 200);
+$glitch-color2: rgb(219, 18, 18);
+body {
+    background: rgb(43, 42, 42);
+}
+.button-wrapper {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.glitch-button {
+   font-family: normal;
+   font-size: 4vw;
+   color: white;
+   text-decoration: none;
+   cursor: pointer;
+   &:hover {
+    animation: glitch .3s ease infinite;
+   }
+}
+
+@keyframes glitch {
+    0% {
+		text-shadow: -5px 5px $glitch-color1, -5px 5px $glitch-color2;
+	}
+	20% {
+        text-shadow: -5px 5px $glitch-color1, 5px -5px $glitch-color2;
+	}
+	40% {
+        text-shadow: -5px -5px $glitch-color1, 5px 5px  $glitch-color2;
+	}
+	60% {
+        text-shadow: 5px 5px $glitch-color1, -5px -5px $glitch-color2;
+	}
+	80% {
+        text-shadow: 5px -5px $glitch-color1, -5px 5px $glitch-color2;
+	}
+	to {
+		text-shadow: -5px 5px $glitch-color1, -5px 5px $glitch-color2;
+	}
+
+}
