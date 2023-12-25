@@ -14,6 +14,7 @@ svg {
     height: 5vw;
     margin: 1vw;
     cursor: pointer;
+    z-index: 2;
 }
 #right_arr {
     transform: scale(-1,1);
@@ -21,12 +22,13 @@ svg {
 .carousel {
     margin: auto;
     display: flex;
+    position: relative;
     width: 72%;
     height: 60%;    
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
     &__list {
-        overflow: hidden;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -37,6 +39,7 @@ svg {
     }
     &__item {
         display: flex;
+        opacity: 0.5;
         flex-direction: column;
         border: 4px solid black;
         border-radius: 3px;
@@ -61,3 +64,28 @@ svg {
     }
 }
 
+.is-visible {
+    animation: fadeFrom5 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+.is-hidden {
+    animation: fadeFrom1 1.5s ease-in-out;
+  }
+
+@keyframes fadeFrom1 {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+}
+@keyframes fadeFrom5 {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+  

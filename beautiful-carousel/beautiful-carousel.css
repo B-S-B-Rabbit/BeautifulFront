@@ -23,6 +23,7 @@ svg {
   height: 5vw;
   margin: 1vw;
   cursor: pointer;
+  z-index: 2;
 }
 
 #right_arr {
@@ -35,6 +36,7 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   width: 72%;
   height: 60%;
   -webkit-box-pack: center;
@@ -43,9 +45,9 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 .carousel__list {
-  overflow: hidden;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -62,6 +64,7 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 0.5;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -87,4 +90,50 @@ svg {
 .carousel__caption {
   text-align: center;
   height: 15%;
+}
+
+.is-visible {
+  -webkit-animation: fadeFrom5 1.5s ease-in-out;
+          animation: fadeFrom5 1.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.is-hidden {
+  -webkit-animation: fadeFrom1 1.5s ease-in-out;
+          animation: fadeFrom1 1.5s ease-in-out;
+}
+
+@-webkit-keyframes fadeFrom1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeFrom1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes fadeFrom5 {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeFrom5 {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
