@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Godzilla;
+  src: url(Godzilla.ttf);
+}
 html, body {
   height: 100vh;
   width: 100vw;
@@ -11,6 +15,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #082739;
 }
 
 * {
@@ -18,17 +23,38 @@ html, body {
           box-sizing: border-box;
 }
 
-svg {
-  width: 5vw;
-  height: 5vw;
+#left_arr, #right_arr {
+  fill: #E24B16;
+  width: 4vw;
+  height: 4vw;
   margin: 1vw;
   cursor: pointer;
   z-index: 2;
+}
+#left_arr:hover, #right_arr:hover {
+  background-color: rgba(0, 0, 0, 0.459);
+  border-radius: 40%;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+#left_arr:active, #right_arr:active {
+  -webkit-transition: background-color 0.1s, -webkit-transform 0.1s;
+  transition: background-color 0.1s, -webkit-transform 0.1s;
+  transition: background-color 0.1s, transform 0.1s;
+  transition: background-color 0.1s, transform 0.1s, -webkit-transform 0.1s;
+  background-color: rgba(255, 255, 255, 0.459);
+  fill: red;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #right_arr {
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
+}
+#right_arr:active {
+  -webkit-transform: scale(-1, 1.1);
+          transform: scale(-1, 1.1);
 }
 
 .carousel {
@@ -64,13 +90,12 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  opacity: 0.5;
+  opacity: 0.4;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 4px solid black;
-  border-radius: 3px;
+  border: 4px solid #391018;
   margin-right: 1%;
   width: 32.5%;
   height: 100%;
@@ -80,6 +105,10 @@ svg {
   left: 0;
   -webkit-transition: left 1s;
   transition: left 1s;
+  cursor: pointer;
+}
+.carousel__item:hover .carousel__caption {
+  background-image: url("background-dripping.gif");
 }
 .carousel__img {
   height: 85%;
@@ -88,20 +117,30 @@ svg {
   width: 100%;
 }
 .carousel__caption {
+  font-family: Godzilla;
+  font-size: 1.7vw;
+  margin: 0;
+  padding-top: 0.4vw;
   text-align: center;
   height: 15%;
+  overflow: hidden;
+  color: #F9B642;
+  background-color: black;
+}
+.carousel__film-name {
+  color: #E24B16;
 }
 
 .is-visible {
-  -webkit-animation: fadeFrom5 1.5s ease-in-out;
-          animation: fadeFrom5 1.5s ease-in-out;
+  -webkit-animation: fadeFrom5 1s ease-in-out;
+          animation: fadeFrom5 1s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .is-hidden {
-  -webkit-animation: fadeFrom1 1.5s ease-in-out;
-          animation: fadeFrom1 1.5s ease-in-out;
+  -webkit-animation: fadeFrom1 1s ease-in-out;
+          animation: fadeFrom1 1s ease-in-out;
 }
 
 @-webkit-keyframes fadeFrom1 {
@@ -109,7 +148,7 @@ svg {
     opacity: 1;
   }
   100% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 }
 
@@ -118,12 +157,12 @@ svg {
     opacity: 1;
   }
   100% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 }
 @-webkit-keyframes fadeFrom5 {
   0% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
   100% {
     opacity: 1;
@@ -131,7 +170,7 @@ svg {
 }
 @keyframes fadeFrom5 {
   0% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
   100% {
     opacity: 1;
