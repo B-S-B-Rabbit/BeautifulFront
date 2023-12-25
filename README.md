@@ -14,5 +14,6 @@ Hi. I am an aspiring frontend developer. This repository is my own storehouse of
 * ## [Beautiful-list](beautiful-list)
   * ### A beautiful floating list. There is no special design, it can be customized by you. The main interesting feature is the departure of the list items at the time of scrolling by the user to the desired position on the site. The mobile version will be available later.
 ![Таблица](images/list.gif)
+  
 # You can also rate my other projects:
 * ## [Web-calculator](https://github.com/B-S-B-Rabbit/B-S-B-Rabbit.github.io)
